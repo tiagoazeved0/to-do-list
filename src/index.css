@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;1,100;1,300&display=swap");
+
+::-moz-placeholder {
+  color: lightgray;
+  font-style: italic;
+}
+
+textarea:focus, input:focus, h2:focus {
+  outline: none;
+}
+
+body {
+  background-color: #f5eeee;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 200;
+  color: lightgray;
+  transition: transform .9s;
+ 
+}
+
+h1:hover {
+  transform: scale(1.1);
+  font-weight: 300;
+  color: #bdb8b8;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 1rem;
+}
+
+form {
+  flex-grow: 1;
+}
+
+.todo-app {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-box {
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 10px 6px 17px 0px rgba(199,199,199,1);
+  -moz-box-shadow: 10px 6px 17px 0px rgba(199,199,199,1);
+  box-shadow: 10px 6px 17px 0px rgba(199,199,199,1);
+}
+
+.todo-app-body {
+  background-color: #ffffff;
+  color: #4d4d4d;
+}
+
+.todo-app-form {
+  display: flex;
+  border: solid lightgray;
+  border-width: 0px 0px 1px 0px;
+}
+
+.todo-app-list-item {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+}
+
+.todo-app-remove-button {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+}
+
+.scratched-list-item {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.list-textbox {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.05em;
+  font-size: large;
+  border: none;
+  background-color: white;
+  word-wrap: anywhere;
+  font-family: inherit;
+}
+.todo-bottom {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 33% 33% 33%;
+  background-color: white;
+}
+
+.todo-bottom h2{
+  margin: 0px;
+  font-size: 0.7rem;
+  color: #7a7a7a;
+  font-weight: 300;
+}
+
+.todo-corner-text {
+  padding: 0.8rem;
+}
+
+.todo-buttons-filters {
+  margin:auto;
+}
+
+.background-bottom1 {
+  width: 99%;
+  height: 4px;
+  margin: auto;
+  z-index: -1;
+  border: 1px lightgrey solid;
+  border-top: none;
+}
+
+.background-bottom2 {
+  width: 98%;
+  height: 4px;
+  margin: auto;
+  z-index: -2;
+  border: 1px lightgrey solid;
+  border-top: none;
+}
