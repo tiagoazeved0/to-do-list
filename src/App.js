@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import FilterButton from "./components/FilterButton";
 import Form from "./components/Form";
 import { nanoid } from "nanoid";
-import Arrow from "./resources/down-arrow.svg";
+import Arrow from "./components/Arrow";
 import ListElement from "./components/ListElement";
 import Checkbox from "./components/Checkbox";
 import ExitButton from "./components/ExitButton";
@@ -101,7 +101,7 @@ function App(props) {
       <div className="todo-test">
         <div className="todo-box">
           <ListElement
-            left={<img src={Arrow} alt="Arrow" />}
+            left={<Arrow />}
             right={<Form addTask={addTask} />}
           />
           <div className="todo-app-tasklist">
@@ -109,8 +109,7 @@ function App(props) {
               role="list"
               className="todo-list"
               aria-labelledby="list-heading"
-            >
-              {taskList}
+            >{taskList}
             </ul>
           </div>
           <div className="todo-bottom">
