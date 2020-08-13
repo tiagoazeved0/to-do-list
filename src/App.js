@@ -57,14 +57,6 @@ function App(props) {
   const tasksNoun = taskList.length !== 1 ? "items" : "item";
   const cornerText = `${taskList.length} ${tasksNoun} remaining`;
 
-  function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  }
-
   function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
@@ -85,16 +77,6 @@ function App(props) {
     setTasks(updatedTasks);
   }
 
-  const listHeadingRef = useRef(null);
-
-  const prevTaskLength = usePrevious(tasks.length);
-
-  useEffect(() => {
-    if (tasks.length - prevTaskLength === -1) {
-      listHeadingRef.current.focus();
-    }
-  }, [tasks.length, prevTaskLength]);
-
   return (
     <div className="todo-app">
       <h1 id="todo-title">todos</h1>
@@ -114,7 +96,7 @@ function App(props) {
           </div>
           <div className="todo-bottom">
             <div className="todo-corner-text">
-              <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
+              <h2 id="list-heading" tabIndex="-1">
                 {cornerText}
               </h2>
             </div>
