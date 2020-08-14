@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
+import { nanoid } from "nanoid";
 import FilterButton from "./components/FilterButton";
 import Form from "./components/Form";
-import { nanoid } from "nanoid";
 import Arrow from "./components/Arrow";
 import ListElement from "./components/ListElement";
 import Checkbox from "./components/Checkbox";
@@ -87,12 +87,12 @@ function App(props) {
             right={<Form addTask={addTask} />}
           />
           <div className="todo-app-tasklist">
-            <ul
+            <li
               role="list"
               className="todo-list"
               aria-labelledby="list-heading"
             >{taskList}
-            </ul>
+            </li>
           </div>
           <div className="todo-bottom">
             <div className="todo-corner-text">
